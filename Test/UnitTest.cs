@@ -23,12 +23,21 @@ namespace ACM.BL.Test
             Assert.AreEqual("Solo", result.LastName);
             Assert.AreEqual("Han", result.FirstName);
         }
+
+
+
+
         //Zadanie 1
         // Napisz test jednostkowy sprawdzadzj¹cy dzia³anie naszej funckji "SortByName" zadeklarowanej w "CharactersRepository".
-        
-        
+
+
         //Zadanie 2
         // Napisz test jednostkowy sprawdzadzj¹cy dzia³anie naszej funckji "SortByNameInReverse" zadeklarowanej w "CharactersRepository".
+
+
+        //Zadanie 3
+        // Napisz test jednostkowy sprawdzadzj¹cy dzia³anie naszej funckji "SortByType" zadeklarowanej w "CharactersRepository".
+
         
 
     }

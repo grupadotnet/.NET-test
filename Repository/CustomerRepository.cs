@@ -24,32 +24,33 @@ namespace ACM.BL
 
         public List<Customer> Retrieve()
         {
-            List<Customer> custList = new List<Customer>
+
+            List<Customer> charList = new List<Customer>
                     {new Customer()
                           { CustomerId = 1,
-                            FirstName="Luke",
-                            LastName = "Skywalker",
-                            EmailAddress = "ls@hob.me",
+                            FirstName="Ahsoka",
+                            LastName = "Tano",
+                            EmailAddress = "at@hob.me",
                             CustomerTypeId=1},
                     new Customer()
                           { CustomerId = 2,
                             FirstName="Anakin",
                             LastName = "Skywalker",
                             EmailAddress = "as@hob.me",
-                            CustomerTypeId=null},
+                            CustomerTypeId=2},
                     new Customer()
                           { CustomerId = 3,
                             FirstName="Darth",
                             LastName = "Vader",
                             EmailAddress = "dv@hob.me",
-                            CustomerTypeId=1},
+                            CustomerTypeId=3},
                     new Customer()
                           { CustomerId = 4,
                             FirstName="Han",
                             LastName = "Solo",
                             EmailAddress = "hs@hob.me",
-                            CustomerTypeId=2}};
-            return custList;
+                            CustomerTypeId=4}};
+            return charList;
         }
         public IEnumerable<Customer> SortByName(List<Customer> customerList)
         {
@@ -64,5 +65,12 @@ namespace ACM.BL
             //Lub
             return SortByName(customerList).Reverse();
         }
+        public IEnumerable<Customer> SortByType(List<Customer> customerList)
+        {
+            return customerList.OrderBy(c => c.CustomerTypeId);
+            //return characterList.OrderByDescending(c => c.CustomerTypeId.HasValue)
+            //                    .ThenBy(c => c.CustomerTypeId);
+        }
+        
     }
 }
